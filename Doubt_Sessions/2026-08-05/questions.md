@@ -82,14 +82,6 @@ Write a Python program that:
 
 ---
 
-## Concepts Covered
-
-- List
-- append()
-- remove()
-- for loop
-- Input
-- Output
 
 ---
 
@@ -163,14 +155,7 @@ Write a Python program that:
 
 ---
 
-## Concepts Covered
 
-- Tuple
-- count()
-- index()
-- max()
-- min()
-- sum()
 
 ---
 
@@ -250,13 +235,7 @@ Write a Python program that:
 
 ---
 
-## Concepts Covered
 
-- Set
-- add()
-- remove()
-- len()
-- for loop
 
 ---
 
@@ -339,15 +318,7 @@ Write a Python program that:
 
 ---
 
-## Concepts Covered
 
-- Dictionary
-- Keys
-- Values
-- Items
-- update()
-- pop()
-- for loop
 
 ---
 
@@ -417,18 +388,6 @@ Write a Python program that:
 - Sort the list in ascending order.
 - Display the sorted list.
 
----
-
-## Concepts Covered
-
-- List
-- while loop
-- append()
-- sort()
-- max()
-- min()
-- sum()
-- len()
 
 ---
 
@@ -516,15 +475,7 @@ Bread : 20
 
 ---
 
-## Concepts Covered
 
-- Dictionary
-- update()
-- pop()
-- keys()
-- values()
-- items()
-- len()
 
 ---
 
@@ -608,15 +559,7 @@ Write a Python program that:
 
 ---
 
-## Concepts Covered
 
-- Dictionary
-- Keys
-- Values
-- Items
-- update()
-- pop()
-- for loop
 
 ---
 
@@ -688,16 +631,6 @@ Write a Python program that:
 
 ---
 
-## Concepts Covered
-
-- List
-- while loop
-- append()
-- sort()
-- max()
-- min()
-- sum()
-- len()
 
 ---
 
@@ -785,15 +718,7 @@ Bread : 20
 
 ---
 
-## Concepts Covered
 
-- Dictionary
-- update()
-- pop()
-- keys()
-- values()
-- items()
-- len()
 
 ---
 
@@ -879,16 +804,7 @@ Write a Python program that:
 
 ---
 
-## Concepts Covered
 
-- Tuple
-- count()
-- index()
-- for loop
-- if statement
-- max()
-- min()
-- sum()
 
 ---
 
@@ -979,13 +895,7 @@ Write a Python program that:
 
 ---
 
-## Concepts Covered
 
-- Nested List
-- Nested for loop
-- List
-- Searching
-- if statement
 
 ---
 
@@ -1066,14 +976,7 @@ Write a Python program that:
 
 ---
 
-## Concepts Covered
 
-- Dictionary
-- Strings
-- split()
-- get()
-- for loop
-- if statement
 
 ---
 
