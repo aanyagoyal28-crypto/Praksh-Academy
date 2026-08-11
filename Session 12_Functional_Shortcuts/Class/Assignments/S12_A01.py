@@ -59,7 +59,7 @@ for name, price in winners:
 mapped = list(map(lambda p: f"{p[0]}: Rs {p[1]}", bills))
 print(mapped)
 
-#q09(unsure)
+#q09(DOUBT)
 
 
 #q10
