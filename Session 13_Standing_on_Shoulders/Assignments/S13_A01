@@ -1,0 +1,87 @@
+#q01
+import math
+print(math.ceil(47.2))
+print(math.sqrt(144))
+
+#q02
+import random
+random.seed(7)
+customers = ["Sunita", "Ramesh", "Ayaan", "Meera"] #ayaan since seed is set to 7
+print(random.choice(customers))
+
+#q03
+
+import math
+print(math.ceil(103.01))
+from math import ceil 
+print(ceil(47.2))
+print(math.floor(47.9))
+
+#q04
+import random
+random.seed(42)
+customers = ["Sunita", "Ramesh", "Ayaan", "Meera"]
+print (random.choice(customers))
+print(random.randint(1, 100))
+
+#q05
+from datetime import date
+print(date(2026, 7, 15))
+print(date(2026, 7, 15).strftime("%d-%m-%y"))
+print(date(2026, 7, 15).strftime("%A %d %B %Y"))
+
+#q06
+def apply_discount(bill, rate=0.10):
+    # Return the bill after applying the discount rate (default 10%)
+    return bill - (bill * rate)
+
+
+def add_gst(amount):
+    # Return the amount after adding 5% GST
+    return amount + (amount * 0.05)
+
+
+print(apply_discount(1200))
+print(add_gst(100))
+print(apply_discount.__doc__)
+
+
+#q07
+from math import ceil
+print(math.ceil(4.2))
+
+#q08
+def apply_discount(bill, rate=0.10):
+    return bill - (bill*rate)
+def add_gst(amount):
+    return amount + (amount * 0.05)
+def format_receipt_line(item, qty, price):
+   total = qty * price
+   return f"{item} x{qty} Rs {total}"
+print("====== PRAKSH MART ======")
+from datetime import date
+print("Date ;" , date(2026, 7, 15).strftime("%d-%m-%y"))
+
+print(format_receipt_line("Rice", 2, 80))
+print(format_receipt_line("Oil", 1, 150))
+subtotal = (2*80 + 1*150)
+print("Subtotal: " , subtotal)
+to_pay = add_gst(apply_discount(subtotal))
+print("To pay: Rs " , {to_pay})
+
+#q09
+
+def change_due(paid, total):
+    """Return the change owed to the customer, rounded to 2 decimal places."""
+    return round(paid - total, 2)
+
+
+def loyalty_points(total):
+    """Return 1 loyalty point for every full Rs 100 spent, using floor division."""
+    return int(total // 100)
+
+
+print(change_due(500, 292.95))
+print(loyalty_points(292.95))
+print(loyalty_points(1050))
+
