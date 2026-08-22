@@ -1,6 +1,6 @@
 #ceil(decimal) it will round UP ceil(42.7)43
-# import math
-# print(math.ceil(42.7))
+import math
+print(math.ceil(42.7))
 # print(math.sqrt(169))
 
 # from math import ceil, sqrt
