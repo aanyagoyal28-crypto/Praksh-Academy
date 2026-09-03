@@ -201,3 +201,37 @@ elif num2>num1 and num2>num3:
     print(f"Largest = {num2}")
 else:
     print(f"Largest = {num3}")
+
+
+    '''
+     Assignment 9: Age Eligibility Checker
+
+## Question
+Ask the user to enter their age.
+
+Print whether the user is:
+- Eligible to Vote (18+)
+- Eligible to Drive (18+)
+- Eligible to Drink (21+)
+
+---
+
+# Assignment 10: Mini Calculator
+
+## Question
+Take two numbers from the user.
+
+Display:
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Floor Division
+- Modulus
+- Exponent (**)
+
+Finally print:
+- Are both numbers equal?
+- Is the first number greater than the second?
+- Is at least one number even?
+'''

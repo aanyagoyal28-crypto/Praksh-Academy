@@ -1,3 +1,244 @@
+
+# # class Product:
+# #     def __init__(self,product_id,name,price,stock, category):
+# #         self.product_id=product_id
+# #         self.name=name
+# #         self.price=price
+# #         self.stock=stock
+# #         self.category=category
+
+# #     def get_product_info(self):
+# #         print(f"Product ID : {self.product_id}")
+# #         print(f" Name : {self.name}")
+# #         print(f"Price: {self.price}")
+# #         print(f"Stock : {self.stock}")
+# #         print({f"Category: {self.category}"})
+
+# #     def add_stock(self,quantity):
+# #         self.stock+=quantity
+# #     def remove_stock(self,quantity):
+# #         if self.stock>quantity:
+# #             self.stock-=quantity
+# #         else:
+# #             print("Insufficient Stock")
+
+# # class RegularProduct(Product):
+# #     def get_product_info(self):
+# #             print(f"Product ID : {self.product_id}")
+# #             print(f" Name : {self.name}")
+# #             print(f"Price: {self.price}")
+# #             print(f"Stock : {self.stock}")
+# #             print({f"Category: {self.category}"})
+# #             print("Product Type: Regular")
+# # class PerishableProduct(Product):
+# #     def __init__(self,product_id,name,price,stock, category, expiry_date):
+# #         super().__init__(product_id,name,price,stock, category)
+# #         self.expiry_date=expiry_date
+# #         def get_product_info(self):
+# #                     print(f"Product ID : {self.product_id}")
+# #                     print(f" Name : {self.name}")
+# #                     print(f"Price: {self.price}")
+# #                     print(f"Stock : {self.stock}")
+# #                     print({f"Category: {self.category}"})
+# #                     print("Product Type: Perishable")
+# #                     print({f"Expiry Date: {self.expiry_date}"})
+
+# # '''
+# # ## 3. Customer Class
+# # Create `Customer` with:
+# # - customer_id
+# # - name
+# # - phone
+# # - orders (list)
+
+# # Provide methods to display details, add an order and display order history.
+
+# # ## 4. Order Class
+# # Create `Order` with:
+# # - order_id
+# # - customer
+# # - purchased products
+# # - total amount
+# # - order status
+
+# # An order can contain multiple items, for example:
+# # ```python
+# # [
+# #     {"product_id": "P101", "name": "Rice", "quantity": 2, "price": 60}
+# # ]
+
+# # '''
+# # class Customer:
+# #      def __init__(self,customer_id, name, phone):
+# #       self.customer_id=customer_id
+# #       self.name=name
+# #       self.phone=phone
+# #       self.orders=[]
+
+# #       def display_details(self):
+# #            print(f"Customer ID : {self.customer_id}")
+# #            print(f"Name: {self.name}")
+# #            print(f"Phone: {self.phone}")
+# #       def add_order(self,new_order):
+# #            self.orders.append(new_order)
+# #       def display_order_history(self):
+# #            pass
+                   
+# # class Orders :
+# #      def __init__(self,order_id,customer):
+# #           self.order_id=order_id
+# #           self.customer =customer
+# #           self.order_status= "Pending"
+# #           self.items=[]
+# #           self.subtotal=0
+# #           self.discount_percent=0
+# #           self.discount_amount=0
+# #           self.final_amount=0
+# #      def add_items(self,product, quantity):
+# #           item={
+# #                "product id": product.product_id,
+# #                "name": product.name,
+# #                "quantity": quantity,
+# #                "price": product.price,
+# #           }
+# #           self.items.append(item)
+# #           item_total=quantity*product.price
+# #           self.subtotal+=item_total
+# #      def calculate_total(self):
+# #         if self.subtotal >= 10000:
+# #             self.discount_percentage = 15
+# #         elif self.subtotal>=5000:
+# #             self.discount_precentage = 10
+# #         elif self.subtotal >= 1000:
+# #             self.discount_percentage = 5
+# #         else: 
+# #             self.discount_percentage = 0
+
+# #         self.discount_amount = (
+# #             self.subtotal* self.discount_percentage/100
+# #         )
+# #         self.final_amount = (
+# #             self.subtotal - self.discount_amount
+# #         )
+
+# #      def display_invoice(self):
+# #         print("\n")
+# #         print("="*60)
+# #         print("         STORE INVOICE")
+# #         print("="*60)
+# #         print(f"Order ID : {self.order_id}")
+# #         print(f"Customer : {self.customer.name}")
+# #         print("-"*60)
+# #         print(
+# #             f"{'Product':<20}"
+# #             f"{'Qty':<8}"
+# #             f"{'Price':<12}"
+# #             f"{'Total':<12}"
+# #         )
+# #         print("-"*60)
+
+# #         for item in self.items:
+# #             total = (
+# #                 item["price"]*item["quantity"]
+# #             )
+
+# #             print(
+# #                 f"{item['name']:<20}"
+# #                 f"{item['quanity']:<8}"
+# #                 f"{item['price']:<12.2f}"
+# #                 f"{total:<12.2f}"
+# #             )
+
+# #         print("-"*60)
+# #         print(
+# #             f"Subtotal          : ₹{self.subtotal:.2f}"
+# #         )
+# #         print(
+# #             f"Discount          : {self.discount_percentage}%"
+# #         )
+# #         print(
+# #             f"Discount Amount   : ₹{self.discount_amount:.2f}"
+# #         )
+# #         print(
+# #             f"Final Amount      : ₹{self.final_amount:.2f}"
+# #         )
+# #         print(
+# #             f"Order Status      : {self.status}"
+# #         )
+# #         print("="*60)
+
+# # '''
+
+# # ## 5. StoreManager Class
+# # Maintain:
+# # - `inventory`: dictionary mapping Product ID to Product object
+# # - `customers`: dictionary mapping Customer ID to Customer object
+# # - `orders`: list of Order objects
+# # - `categories`: set of unique categories
+
+# # ## 6. Add Product
+# # Ask for Product ID, name, price, stock, category and product type. Reject duplicate IDs and invalid negative price/stock.
+
+# # '''
+
+# # class StoreManager:
+# #     def __init__(self):
+# #         self.inventory={}
+# #         self.customers={}
+# #         self.orders=[]
+# #         self.categories=set()
+# #         self.order_counter = 1000
+
+# #     def add_product(self,product):
+# #         if product.product_id in self.inventory:
+# #             print("Product already exists")
+# #             return
+        
+# #         if product.price < 0:
+# #             print("Price cannot be negative. ")
+# #             return
+
+# #         if product.stock < 0:
+# #             print("Stock cannot be negative. ")
+# #             return 
+
+# #         self.inventory[product.product_id] = product
+# #         self.categories.add(product.category)
+# #         print("Product added successfully")
+
+# #     def replace_inventory(self,product,new_stock):
+# #         self.new_stock=new_stock
+# #         if product.product_id not in self.inventory:
+# #             print("Product not in inventory")
+# #             return
+# #         if product.price < 0:
+# #             print("Price cannot be negative. ")
+# #             return
+        
+# #         if product.stock < 0:
+# #             print("Stock cannot be negative. ")
+# #             return 
+# #         self.inventory[product.product_id]=product
+# #         product.stock=new_stock
+    
+# #     def remove_product(self, product):
+# #         if product.product_id not in self.inventory:
+# #             print("Product ID not found.")
+# #             return
+ 
+# #         del self.inventory[product.product_id]
+# #         print("Product removed successfully")
+ 
+# #     def register_customer(self, customer_id, new_customer):
+# #         if customer_id in self.customers:
+# #             print("Customer ID already exists.")
+# #             return
+ 
+# #         Customer(customer_id, name, phone)= new_customer
+# #         self.customers[customer_id] = new_customer
+# #         # print("Customer registered successfully.")a
+ 
+
 class Product:
     def __init__(self, product_id, name, price, stock, category):
         self.product_id = product_id
@@ -20,7 +261,7 @@ class Product:
         if quantity <= self.stock:
             self.stock -= quantity
             return True
-            
+
         return False
 
 
@@ -34,10 +275,11 @@ class RegularProduct(Product):
         print(f"Category : {self.category}")
         print(f"Product Type : Regular")
 
+
 class PerishableProduct(Product):
     def __init__(self, product_id, name, price, stock, category, expiry_date):
         super().__init__(product_id, name, price, stock, category)
-        self.expirty_date = expiry_date
+        self.expiry_date = expiry_date
 
     def get_product_info(self):
         print(f"Product Id : {self.product_id}")
@@ -46,7 +288,7 @@ class PerishableProduct(Product):
         print(f"Stock : {self.stock}")
         print(f"Category : {self.category}")
         print(f"Product Type : Perishable")
-        print(f"Expirty Date : {self.expirty_date}")
+        print(f"Expiry Date : {self.expiry_date}")
 
 
 class Customer:
@@ -54,13 +296,13 @@ class Customer:
         self.customer_id = customer_id
         self.name = name
         self.phone = phone
-        self.orders=[]
+        self.orders = []
 
     def add_order(self, order):
         self.orders.append(order)
 
     def display_customer(self):
-        print(f"Cutomer ID : {self.customer_id}")
+        print(f"Customer ID : {self.customer_id}")
         print(f"Name : {self.name}")
         print(f"Phone : {self.phone}")
 
@@ -68,15 +310,15 @@ class Customer:
         print("\n========================")
         print(f"Order History")
         print("==========================")
-        if len(self.orders)==0:
+        if len(self.orders) == 0:
             print("No orders found.")
-            return 
+            return
 
         for order in self.orders:
             print(
-                f"Order ID : {orders.order_id} |"
-                f"Amount : ₹{orders.final_amount:.2f} |"
-                f"Status : {orders.status}"
+                f"Order ID : {order.order_id} |"
+                f"Amount : ₹{order.final_amount:.2f} |"
+                f"Status : {order.status}"
             )
 
 
@@ -84,7 +326,7 @@ class Order:
     def __init__(self, order_id, customer):
         self.order_id = order_id
         self.customer = customer
-        self.items=[]
+        self.items = []
         self.subtotal = 0
         self.discount_percentage = 0
         self.discount_amount = 0
@@ -92,9 +334,9 @@ class Order:
         self.status = "Pending"
 
     def add_item(self, product, quantity):
-        item={
-            "product_id" : product.product_id,
-            "name" : product.name,
+        item = {
+            "product_id": product.product_id,
+            "name": product.name,
             "quantity": quantity,
             "price": product.price
         }
@@ -105,15 +347,15 @@ class Order:
     def calculate_total(self):
         if self.subtotal >= 10000:
             self.discount_percentage = 15
-        elif self.subtotal>=5000:
-            self.discount_precentage = 10
+        elif self.subtotal >= 5000:
+            self.discount_percentage = 10
         elif self.subtotal >= 1000:
             self.discount_percentage = 5
-        else: 
+        else:
             self.discount_percentage = 0
 
         self.discount_amount = (
-            self.subtotal* self.discount_percentage/100
+            self.subtotal * self.discount_percentage / 100
         )
         self.final_amount = (
             self.subtotal - self.discount_amount
@@ -121,33 +363,33 @@ class Order:
 
     def display_invoice(self):
         print("\n")
-        print("="*60)
+        print("=" * 60)
         print("         STORE INVOICE")
-        print("="*60)
+        print("=" * 60)
         print(f"Order ID : {self.order_id}")
         print(f"Customer : {self.customer.name}")
-        print("-"*60)
+        print("-" * 60)
         print(
             f"{'Product':<20}"
             f"{'Qty':<8}"
             f"{'Price':<12}"
             f"{'Total':<12}"
         )
-        print("-"*60)
+        print("-" * 60)
 
         for item in self.items:
             total = (
-                item["price"]*item["quantity"]
+                item["price"] * item["quantity"]
             )
 
             print(
                 f"{item['name']:<20}"
-                f"{item['quanity']:<8}"
+                f"{item['quantity']:<8}"
                 f"{item['price']:<12.2f}"
                 f"{total:<12.2f}"
             )
 
-        print("-"*60)
+        print("-" * 60)
         print(
             f"Subtotal          : ₹{self.subtotal:.2f}"
         )
@@ -163,29 +405,29 @@ class Order:
         print(
             f"Order Status      : {self.status}"
         )
-        print("="*60)
+        print("=" * 60)
 
 
 class StoreManager:
     def __init__(self):
-        self.inventory={}
-        self.customers={}
-        self.orders=[]
-        self.categories=set()
+        self.inventory = {}
+        self.customers = {}
+        self.orders = []
+        self.categories = set()
         self.order_counter = 1000
 
-    def add_product(self,product):
+    def add_product(self, product):
         if product.product_id in self.inventory:
             print("Product already exists")
             return
-        
+
         if product.price < 0:
             print("Price cannot be negative. ")
             return
 
         if product.stock < 0:
             print("Stock cannot be negative. ")
-            return 
+            return
 
         self.inventory[product.product_id] = product
         self.categories.add(product.category)
@@ -193,9 +435,9 @@ class StoreManager:
 
     def display_inventory(self):
         print("\n")
-        print("="*60)
+        print("=" * 60)
         print("         STORE INVENTORY")
-        print("="*60)
+        print("=" * 60)
 
         if len(self.inventory) == 0:
             print("Inventory is empty")
@@ -203,9 +445,9 @@ class StoreManager:
 
         for product in self.inventory.values():
             product.get_product_info()
-            print("-"*60)
+            print("-" * 60)
 
-    def update_stock(self,product_id):
+    def update_stock(self, product_id):
         if product_id not in self.inventory:
             print("Product not found")
             return
@@ -214,7 +456,7 @@ class StoreManager:
         print("\n 1. Add stock")
         print("2. Replace stock")
 
-        choice = int(input("Enter choice = "))
+        choice = input("Enter choice = ")
 
         quantity = int(input("Enter quantity = "))
 
@@ -228,7 +470,7 @@ class StoreManager:
         elif choice == "2":
             product.stock = quantity
             print("Stock replaced successfully")
-        else: 
+        else:
             print("Invalid choice")
 
     def remove_product(self, product_id):
@@ -239,7 +481,6 @@ class StoreManager:
         self.inventory.pop(product_id)
         print("Product removed successfully")
 
-
     def register_customer(self):
         customer_id = input("Enter customer id : ")
         if customer_id in self.customers:
@@ -247,10 +488,10 @@ class StoreManager:
             return
 
         name = input("Enter Customer Name = ")
-        phone= input("Enter Phone Number = ")
+        phone = input("Enter Phone Number = ")
 
         customer = Customer(
-            customer_id, 
+            customer_id,
             name,
             phone
         )
@@ -259,18 +500,17 @@ class StoreManager:
 
     def display_customer(self):
         print("\n")
-        print("="*60)
+        print("=" * 60)
         print("         CUSTOMER")
-        print("="*60)
+        print("=" * 60)
 
         if len(self.customers) == 0:
             print("No customers found.")
             return
 
         for customer in self.customers.values():
-            customer.display_cutomer()
             customer.display_customer()
-            print("-"*60)
+            print("-" * 60)
 
     def create_order(self):
         customer_id = input("Enter Customer ID : ")
@@ -279,15 +519,14 @@ class StoreManager:
             return
 
         customer = self.customers[customer_id]
-        self.order_counter+=1
-        order_id = "O"+str(self.order_counter)
+        self.order_counter += 1
+        order_id = "O" + str(self.order_counter)
         order = Order(
-            order_id, 
+            order_id,
             customer
         )
         while True:
             product_id = input("\nEnter Product ID(0 to finish) = ")
-            if product_id = "0":
             if product_id == "0":
                 break
             if product_id not in self.inventory:
@@ -295,7 +534,7 @@ class StoreManager:
                 continue
             product = self.inventory[product_id]
             quantity = int(input("Enter Quantity"))
-            if quantity<0:
+            if quantity < 0:
                 print("Quantity cannot be less than zero")
                 continue
             if quantity > product.stock:
@@ -312,25 +551,24 @@ class StoreManager:
             product.remove_stock(quantity)
             print("Product added to order. ")
 
-            if len(order.items) == 0:
-                print("Order Cancelled\nNo products selected")
-                return 
+        if len(order.items) == 0:
+            print("Order Cancelled\nNo products selected")
+            return
 
-            order.calculate_total()
-            order.status="Confirmed"
-            self.orders.append(order)
-            customer.add_order(order)
-            print("\nOrder created successfully")
-            order.display_invoice()
+        order.calculate_total()
+        order.status = "Confirmed"
+        self.orders.append(order)
+        customer.add_order(order)
+        print("\nOrder created successfully")
+        order.display_invoice()
 
     def view_order_history(self):
         customer_id = input("Enter Customer Id = ")
-        if customer_id not in self.customers: 
+        if customer_id not in self.customers:
             print("Customer not found")
-            return 
+            return
 
         customer = self.customers[customer_id]
-        customer.display_orders()
         customer.display_order()
 
     def search_product(self):
@@ -341,24 +579,22 @@ class StoreManager:
         found = False
 
         for product in self.inventory.values():
-            if(
+            if (
                 search == product.product_id.lower()
                 or search == product.name.lower()
                 or search == product.category.lower()
             ):
-                product.get_product_info():
                 product.get_product_info()
-                print("-"*60)
+                print("-" * 60)
                 found = True
 
         if not found:
-            print("Product not found")
             print("Product not found")
 
     def store_summary(self):
         total_units = 0
         total_sales = 0
-        
+
         highest_price = 0
         highest_product = ""
 
@@ -370,7 +606,7 @@ class StoreManager:
         for product in self.inventory.values():
             total_units += product.stock
 
-            if first_product: 
+            if first_product:
                 highest_price = product.price
                 highest_product = product.name
 
@@ -379,7 +615,7 @@ class StoreManager:
 
                 first_product = False
 
-            else : 
+            else:
                 if product.price > highest_price:
                     highest_price = product.price
                     highest_product = product.name
@@ -388,15 +624,14 @@ class StoreManager:
                     lowest_price = product.price
                     lowest_product = product.name
 
-        
         for order in self.orders:
             if order.status == "Confirmed":
                 total_sales += order.final_amount
 
         print("\n")
-        print("="*60)
+        print("=" * 60)
         print("         STORE SUMMARY")
-        print("="*60)
+        print("=" * 60)
 
         print(
             f"Total Products    :"
@@ -431,9 +666,7 @@ class StoreManager:
             f"{self.categories}"
         )
 
-        print("="*60)
-
-
+        print("=" * 60)
 
 
 store = StoreManager()
@@ -533,7 +766,7 @@ while True:
 
         if product_type == "1":
             product = RegularProduct(
-                product_id, 
+                product_id,
                 name,
                 price,
                 stock,
@@ -549,7 +782,7 @@ while True:
                 category,
                 expiry
             )
-        else : 
+        else:
             print("Invalid product type.")
             continue
 
@@ -561,7 +794,7 @@ while True:
         product_id = input("Enter Product Id: ")
         store.update_stock(product_id)
     elif choice == "4":
-        product_id = input("Enter Product")
+        product_id = input("Enter Product ID: ")
         store.remove_product(product_id)
     elif choice == "5":
         store.register_customer()
@@ -576,7 +809,42 @@ while True:
     elif choice == "10":
         store.store_summary()
     elif choice == "0":
-        print("\nThan you for using Store Management System")
+        print("\nThank you for using Store Management System")
         break
-    else : 
+    else:
         print("Invalid choice. Please try again.")
+
+
+
+
+
+     
+import sqlite3
+connection = sqlite3.connect('store.db')
+cursor = connection.cursor()
+
+cursor.execute(
+    '''CREATE TABLE IF NOT EXISTS products
+        PRODUCT_ID TEXT NOT NULL,
+        NAME TEXT NOT NULL,
+        PRICE INTEGER NOT NULL,
+        STOCK INTEGER NOT NULL,
+        CATEGORY TEXT NOT NULL,
+        PRODUCT_TYPE TEXT NOT NULL'''
+)
+        
+cursor.execute("INSERT INTO products (PRODUCT_ID, NAME, PRICE, STOCK, CATEGORY, PRODUCT_TYPE) VALUES('P101', 'Rice', 60, 20, 'Food', 'Regular')")
+cursor.execute("INSERT INTO products (PRODUCT_ID, NAME, PRICE, STOCK, CATEGORY, PRODUCT_TYPE) VALUES('P102', 'Milk', 40, 20, 'Food', 'Perishable')")
+cursor.execute("INSERT INTO products (PRODUCT_ID, NAME, PRICE, STOCK, CATEGORY, PRODUCT_TYPE) VALUES('P103', 'Laptop', 120000, 10, 'Electronics', 'Regular')")
+cursor.execute("INSERT INTO products (PRODUCT_ID, NAME, PRICE, STOCK, CATEGORY, PRODUCT_TYPE) VALUES('P104', 'Notebook', 70, 100, 'Stationery', 'Regular')")
+
+
+cursor.execute("SELECT * FROM store")
+rows = cursor.fetchall()
+
+for row in rows:
+    print(row)
+
+
+connection.commit()
+connection.close()
