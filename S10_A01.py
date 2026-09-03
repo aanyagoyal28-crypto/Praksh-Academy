@@ -51,3 +51,13 @@
 # print(by_price[0]["name"], by_price[0]["price"])
 
 #q06
+
+
+
+import requests
+
+response = requests.get(
+    "https://jsonplaceholder.typicode.com/posts/1"
+)
+
+print(response)
