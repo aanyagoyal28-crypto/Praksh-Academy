@@ -82,12 +82,39 @@ VALUES (?, ?, ?, ?, ?, ?)
 #     WHERE city='Muscat'
 #     '''
     # )
-cursor.execute(
-   '''
-     SELECT * from orders_new
-     WHERE price> 50000
-     '''
-)
+# cursor.execute(
+#    '''
+#      SELECT * from orders_new
+#      WHERE price> 50000
+#      '''
+# )
+# for row in cursor.fetchall():
+#     print(row)
+
+# cursor.execute(
+#     '''
+# Select* from Customers
+# ''')
+# for row in cursor.fetchall():
+#     print(row)
+# cursor.execute(
+#     '''
+# Select* from orders_new 
+# ''')
+
+# for row in cursor.fetchall():
+#     print(row)
+
+cursor.execute("""
+SELECT
+c.name,
+o.product,
+o.order_id
+FROM customers c
+LEFT JOIN orders_new o
+on c.customer_id= o.customer_id
+WHERE c.city='Pune' 
+""")
+
 for row in cursor.fetchall():
     print(row)
-
