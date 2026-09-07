@@ -78,3 +78,40 @@ print("After   conversion ",clean_khata["amount"].dtype)
 
 average_amount = clean_khata["amount"].mean()
 clean_khata["amount"]= clean_khata["amount"].fillna(average_amount)
+
+'''
+cleaning pipeline
+'''
+
+clean_khata = khata.copy()
+
+# Step 1: Standardise product names
+clean_khata["product"] = (
+    clean_khata["product"]
+    .str.strip()
+    .str.lower()
+)
+
+# Step 2: Convert amount to numeric
+clean_khata["amount"] = pd.to_numeric(
+    clean_khata["amount"],
+    errors="coerce"
+)
+
+# Step 3: Fill missing product names
+clean_khata["product"] = clean_khata["product"].fillna(
+    "unknown"
+)
+
+# Step 4: Fill missing quantity
+clean_khata["qty"] = clean_khata["qty"].fillna(0)
+
+# Step 5: Fill missing amount
+clean_khata["amount"] = clean_khata["amount"].fillna(
+    clean_khata["amount"].mean()
+)
+
+# Step 6: Remove duplicates
+clean_khata = clean_khata.drop_duplicates()
+
+print(clean_khata)
