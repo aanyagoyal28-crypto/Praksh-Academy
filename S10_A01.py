@@ -52,12 +52,19 @@
 
 #q06
 
+import pandas as pd
+df = pd.DataFrame({
+    "date": ["2024-06-01", "2024-06-02", "2024-06-03"],
+    "sales": [100, 150, 200]
+})
 
+print(df)
+print(df.dtypes)
 
-import requests
+df["date"] = pd.to_datetime(df["date"])
 
-response = requests.get(
-    "https://jsonplaceholder.typicode.com/posts/1"
-)
+print(df.dtypes)
 
-print(response)
+df["date"] = pd.to_datetime(df["date"],dayfirst=True)
+
+print(pd.to_datetime(df["date"],dayfirst=True))

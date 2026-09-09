@@ -21,7 +21,7 @@ print(result)#[20, 30, 40, 50, 60]
 print("Numpy by adding 10 will be : ",prices+10)#vectorization
 
 prices_with_decimals = np.array([10.32, 20.89, 30.16, 40.98, 50.43])
-print(prices_with_deimals)
+print(prices_with_decimals)
 
 prices_no_dtype = np.array([10, 20, 30, 40, 50],dtype=float)
 print(prices_no_dtype)#[10. 20. 30. 40. 50.]
